@@ -1,6 +1,6 @@
 # Learning Node, Express, React JS , MySQL  JWTfull stack web development
 
-##learn to create a full stack web application from scratch using React, Redux, Hools and JWT Auth
+##learn to create a full stack web application from scratch using React, Redux, Hooks and JWT Authorization 
 
 ## Steps to start for all
 1. Install NPM and NODEJS in your system 
@@ -24,9 +24,9 @@
   ```
 
 ## Steps to work the API
-my-app-ui:[React Redux Login, Logout, Registration example with Hooks](https://www.bezkoder.com/react-hooks-redux-login-registration-example/)
+  my-app-ui:[Node.js Express: JWT example | Token Based Authentication & Authorization](https://www.bezkoder.com/node-js-jwt-authentication-mysql/)
 
-1. Create a directory called "api" and getin
+1. Create a directory called "api" and get in
   ```bash
   mkdir api
   cd ./api
@@ -49,8 +49,8 @@ my-app-ui:[React Redux Login, Logout, Registration example with Hooks](https://w
   ``` 
 
 4 Install "nodemon" with "-D" in parameter, to not create a new element into "package.json" file.<br />
-The nodemon Module is a module that develop node. js based applications by automatically restarting the node application when file changes in the directory are detected.<br />
-Nodemon does not require any change in the original code and method of development.
+  The nodemon Module is a module that develop node. js based applications by automatically restarting the node application when file changes in the directory are detected.<br />
+  Nodemon does not require any change in the original code and method of development.
   ```bash
  
   npm install nodemon -D 
@@ -66,8 +66,48 @@ Nodemon does not require any change in the original code and method of developme
 6. Create a file into "src" a file called "server.js", this is the Structure suggested: <br />
   ![alt text](https://www.bezkoder.com/wp-content/uploads/2020/01/node-js-jwt-authentication-mysql-project-structure.png)
 
+7. Will use a "sequelize", installed in step 3, to access the DB and all CRUD sequences <br />
+  After initializing Sequelize, we don’t need to write CRUD functions, Sequelize supports all of them:
+  * create a new User: create(object)
+  * find a User by id: findByPk(id)
+  * find a User by email: findOne({ where: { email: ... } })
+  * get all Users: findAll()
+  * find all Users by username: findAll({ where: { username: ... } })
+  These functions will be used in our Controllers and Middlewares.<br />
+  For more details, please visit [API Reference for the Sequelize constructor](https://sequelize.org/master/class/lib/sequelize.js~Sequelize.html#instance-constructor-constructor).
+
+8. Tables that we define in models package will be automatically generated in MySQL Database.<br />
+  If you check the database, you can see things like this:
+  ```sql
+  describe users;
+  describe roles;
+  describe user_roles;
+  select * from roles;
+  ```
+
+9. If you don't use initial() function in Sequelize sync() method. You need to run following SQL script:
+  ```sql
+  INSERT INTO roles VALUES (1, 'user', now(), now());
+  INSERT INTO roles VALUES (2, 'moderator', now(), now());
+  INSERT INTO roles VALUES (3, 'admin', now(), now());
+  ```
+
+10. You must complete those:
+  * Configure Auth Key
+  * Create Middleware functions
+  * Controller for Authentication
+  * Controller for testing Authorization
+  * Define Routes
+
+11. You could test with Postman (step 3 in "Steps to start for all") using the example of the picture, <br />
+  but I added some verification in password strength and length of fields.<br />
+  Also remember the port is 49146 (http://localhost:49146/api/auth/signup).<br />
+  ![alt text](https://www.bezkoder.com/wp-content/uploads/2020/01/node-js-jwt-authentication-mysql-signup-new-user.png)
+
+12. Complete all tests, and get the answer of each one.
+
 ## Steps to work the MY-APP-UI with REACT
-api: [Node.js Express: JWT example | Token Based Authentication & Authorization](https://www.bezkoder.com/node-js-jwt-authentication-mysql/)
+  api: [React Redux Login, Logout, Registration example with Hooks](https://www.bezkoder.com/react-hooks-redux-login-registration-example/)
 
 1. From the root run this command
 ```bash
