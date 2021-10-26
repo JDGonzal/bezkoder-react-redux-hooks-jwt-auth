@@ -1,6 +1,6 @@
 # Learning Node, Express, React JS , MySQL  JWTfull stack web development
 
-##learn to create a full stack web application from scratch using React, Redux, Hooks and JWT Authorization 
+## Learn to create a full stack web application from scratch using React, Redux, Hooks and JWT Authorization 
 
 ## Steps to start for all
 1. Install NPM and NODEJS in your system 
@@ -52,7 +52,6 @@
   The nodemon Module is a module that develop node. js based applications by automatically restarting the node application when file changes in the directory are detected.<br />
   Nodemon does not require any change in the original code and method of development.
   ```bash
- 
   npm install nodemon -D 
   ```
 
@@ -109,20 +108,47 @@
 ## Steps to work the MY-APP-UI with REACT
   api: [React Redux Login, Logout, Registration example with Hooks](https://www.bezkoder.com/react-hooks-redux-login-registration-example/)
 
-1. From the root run this command
+1. From the root, run this command
 ```bash
   npx create-react-app my-app-ui
 ```
-2.
 
-3.
+2. Change to the aplication directory
+```bash
+  cd ./my-app-ui
+```
 
-4.
+3. Install with npm the "react-router-dom".<br />
+  Best JavaScript code snippets using react-router-dom.
+  ```bash
+  npm install react-router-dom --save
+  ```
 
-5.
+4. Install into the"Visual Studio Code" editor, the extension called "Code Autocomplete" by "Benas Svipas"
 
+5. Import "Boostrap".<br />
+  Bootstrap is the most popular CSS Framework for developing responsive and mobile-first websites.<br />
+  Bootstrap 5 is the newest version of Bootstrap. [What is Boostrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp)
+  ```bash
+  npm install bootstrap --save
+  ```
+  Open src/App.js and modify the code inside it as following-
+  ```node
+  import React from "react";
+  import "bootstrap/dist/css/bootstrap.min.css";
+
+  const App = () => {
+    // ...
+  }
+
+  export default App;
+  ```
 6. Create an Structure like this: <br />
   ![alt text](https://www.bezkoder.com/wp-content/uploads/2020/09/react-redux-login-registration-example-project-structure.png)
+
+  
+7. If is necessary for get the files of new directory "my-app-ui" available in git for upload to repository, <br />
+  delete into "my-app-ui" the ".git" and ".gitignore", remeber both are inside the "my-app-ui" directory.
 
 ## Note: Run first the API before to run the MY-APP-UI
 At the end, run this command to up the API, to check in Postman 'http://localhost:49146/api/',

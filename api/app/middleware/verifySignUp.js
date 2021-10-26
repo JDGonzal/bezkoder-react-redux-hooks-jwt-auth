@@ -54,6 +54,7 @@ checkRolesExisted = (req, res, next) => {
 
 checkLengthFields = (req, res, next) => {
   if (!req.body.roles||!req.body.username||!req.body.password||!req.body.email){
+    console.log(req.body.roles,req.body.username,req.body.password,req.body.email);
     res.status(400).send({
       message: "Failed! Some Field is missing or with empty value"
     });
