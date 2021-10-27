@@ -150,6 +150,29 @@
 7. If is necessary for get the files of new directory "my-app-ui" available in git for upload to repository, <br />
   delete into "my-app-ui" the ".git" and ".gitignore", remeber both are inside the "my-app-ui" directory.
 
+8. Before working with these services, we need to install Axios with command: <br />
+  Axios is a promise based HTTP client for the browser and Node. js.  <br />
+  Axios makes it easy to send asynchronous HTTP requests to REST endpoints and perform CRUD operations.<br />
+  It can be used in plain JavaScript or with a library such as Vue or React.
+  ```bash
+  npm install axios --save
+  ```
+
+9. Now we need to install Redux, Thunk Middleware and Redux Devtool Extension.<br />
+The redux npm package includes precompiled production and development UMD builds in the dist folder.<br />
+They can be used directly without a bundler and are thus compatible with many popular <br />
+JavaScript module loaders and environments. Run the command:
+```bash
+npm install redux redux-thunk --save
+npm install --save-dev redux-devtools-extension
+```
+
+10. Create React Pages for Authentication. Finally pages with GUI
+  In src folder, create new folder named "components" and add several files as following:
+  - Login.js
+  - Register.js
+  - Profile.js
+
 ## Note: Run first the API before to run the MY-APP-UI
 At the end, run this command to up the API, to check in Postman 'http://localhost:49146/api/',
   ```bash
